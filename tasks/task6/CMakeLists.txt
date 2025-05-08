@@ -16,3 +16,6 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(${PROJECT_NAME}
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
+
+find_package(Threads REQUIRED)
+target_link_libraries(task6 PRIVATE Threads::Threads)
